@@ -1,4 +1,4 @@
-package com.summerp.task2023;
+package com.minio.tpu;
 
 public class Bucket {
     private String name;
