@@ -1,4 +1,4 @@
-package com.summerp.task2023;
+package com.minio.tpu;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
