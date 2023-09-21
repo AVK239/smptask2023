@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object store</title>
+  <link rel="icon" href="images/icon.ico" type="images/x-icon">
+  <link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body class="flex">
+  
+  <!-- Вход -->
+
+  <img src="images/login/background.jpg" class="login__img">
+
+  <div class="login__text flex">
+    <p class="login__text_title">
+      Multi-Cloud Object Store
+    </p>
+    <p class="login_text_info">
+      Object Store's high-performance, Kubernetes-native object store 
+      is licensed under GNU AGPL v3 and is available on every cloud - public, private and edge.
+    </p>
+  </div>
+
+  <div class="login__main flex">
+    <div class="login__main_title flex">
+      <p class="login__main_title-1">
+        OBJECT
+      </p>
+      <p class="login__main_title-2">
+        STORE
+      </p>
+    </div>
+    
+    <input type="text" class="login__main_login" placeholder="Username">
+    <input type="password" class="login__main_password" placeholder="Password">
+
+    <button class="login__main_btn">
+      Login
+    </button>
+  </div>
+
+  <!-- Система -->
+
+  <header class="header flex">
+    <h1 class="header__title flex">
+      <p class="header__title_1">
+        OBJECT
+      </p>
+      <p class="header__title_2">
+        STORE
+      </p>
+
+      <button class="header__title_btn btn flex">
+        <img src="images/header/menu_opened.png" class="header__title_img">
+      </button>
+    </h1>
+
+    <div class="header__line"></div>
+    <nav class="header__nav">
+      <ul class="header__nav_list flex">
+        <li class="header__nav_elem">
+          <button class="header__nav_btn header__nav_btn-1 btn flex">
+            <div class="header__nav_img-container flex">
+              <img src="images/navigation/object_browser.png" class="header__nav_img header__nav_img-1">
+            </div>
+
+            <p class="header__nav_text">
+              Object Browser
+            </p>
+          </button>
+        </li>
+
+        <li class="header__nav_elem">
+          <button class="header__nav_btn header__nav_btn-2 btn flex">
+            <div class="header__nav_img-container flex">
+              <img src="images/navigation/access_keys.png" class="header__nav_img header__nav_img-2">
+            </div>
+
+            <p class="header__nav_text">
+              Access Keys
+            </p>
+          </button>
+        </li>
+
+        <li class="header__nav_elem">
+          <button class="header__nav_btn header__nav_btn-3 btn flex">
+            <div class="header__nav_img-container flex">
+              <img src="images/navigation/documentation.png" class="header__nav_img header__nav_img-3">
+            </div>
+
+            <p class="header__nav_text">
+              Documentation
+            </p>
+          </button>
+        </li>
+
+        <li class="header__nav_elem">
+          <button class="header__nav_btn header__nav_btn-4 btn flex">
+            <div class="header__nav_img-container flex">
+              <img src="images/navigation/baskets.png" class="header__nav_img header__nav_img-4">
+            </div>
+
+            <p class="header__nav_text">
+              Buckets
+            </p>
+          </button>
+        </li>
+
+        <li class="header__nav_elem">
+          <button class="header__nav_btn header__nav_btn-5 btn flex">
+            <div class="header__nav_img-container flex">
+              <img src="images/navigation/monitoring.png" class="header__nav_img header__nav_img-5">
+            </div>
+
+            <p class="header__nav_text">
+              Monitoring
+            </p>
+          </button>
+        </li>
+
+        <li class="header__nav_elem">
+          <button class="header__nav_btn header__nav_btn-6 btn flex">
+            <div class="header__nav_img-container flex">
+              <img src="images/navigation/license.png" class="header__nav_img header__nav_img-6">
+            </div>
+
+            <p class="header__nav_text">
+              License
+            </p>
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="header__exit_btn btn flex">
+      <div class="header__exit_img-container flex">
+        <img src="images/header/sing_out.png" class="header__exit_img">
+      </div>
+
+      <p class="header__exit_text">
+        Sing out
+      </p>
+    </button>
+  </header>
+
+  <main class="main">
+    <section class="section section__1 flex">
+      <h2 class="section__1_title">
+        Object Browser
+      </h2>
+      
+      <div class="section__line"></div>
+      
+      <div class="section__1_down">
+        <div class="section__1_search flex">
+          <input type="text" class="section__1_search_input" placeholder="Filter Buckets">
+  
+          <img src="images/section_1/search.png" class="section__1_search_img">
+        </div>
+  
+        <button class="section__1_reload flex">
+          <img src="images/section_1/reload.png" class="section__1_reload_img">
+        </button>
+  
+        <div class="section__1_main flex">
+          <div class="section__1_main_titles flex">
+            <p class="section__1_main_title section__1_main_titles_name">
+              Name
+            </p>
+  
+            <p class="section__1_main_title section__1_main_titles_objects">
+              Objects
+            </p>
+  
+            <p class="section__1_main_title section__1_main_titles_size">
+              Size
+            </p>
+  
+            <p class="section__1_main_title section__1_main_titles_access">
+              Access
+            </p>
+          </div>
+
+          <div class="section__1_main_line"></div>
+
+          <ul class="section__1_main_list flex">
+            <li class="section__1_main_elem flex">
+              <div class="section__1_main_elem_name flex">
+                <img src="images/section_1/basket.png" class="section__1_main_elem_name_img">
+
+                <p class="section__1_main_elem_name_name">
+                  development.reports
+                </p>
+              </div>
+
+              <p class="section__1_main_elem_objects">
+                18
+              </p>
+
+              <p class="section__1_main_elem_size">
+                36.2MiB
+              </p>
+
+              <p class="section__1_main_elem_access">
+                R/W
+              </p>
+
+              <div class="section__1_main_elem_line"></div>
+            </li>
+
+            <li class="section__1_main_elem flex">
+              <div class="section__1_main_elem_name flex">
+                <img src="images/section_1/basket.png" class="section__1_main_elem_name_img">
+
+                <p class="section__1_main_elem_name_name">
+                  fghgh
+                </p>
+              </div>
+
+              <p class="section__1_main_elem_objects">
+                18
+              </p>
+
+              <p class="section__1_main_elem_size">
+                36.2MiB
+              </p>
+
+              <p class="section__1_main_elem_access">
+                R/W
+              </p>
+
+              <div class="section__1_main_elem_line"></div>
+            </li>
+
+            <li class="section__1_main_elem flex">
+              <div class="section__1_main_elem_name flex">
+                <img src="images/section_1/basket.png" class="section__1_main_elem_name_img">
+
+                <p class="section__1_main_elem_name_name">
+                  klhgjhfd
+                </p>
+              </div>
+
+              <p class="section__1_main_elem_objects">
+                18
+              </p>
+
+              <p class="section__1_main_elem_size">
+                36.2MiB
+              </p>
+
+              <p class="section__1_main_elem_access">
+                R/W
+              </p>
+
+              <div class="section__1_main_elem_line"></div>
+            </li>
+
+            <li class="section__1_main_elem flex">
+              <div class="section__1_main_elem_name flex">
+                <img src="images/section_1/basket.png" class="section__1_main_elem_name_img">
+
+                <p class="section__1_main_elem_name_name">
+                  tyrh4
+                </p>
+              </div>
+
+              <p class="section__1_main_elem_objects">
+                18
+              </p>
+
+              <p class="section__1_main_elem_size">
+                36.2MiB
+              </p>
+
+              <p class="section__1_main_elem_access">
+                R/W
+              </p>
+
+              <div class="section__1_main_elem_line"></div>
+            </li>
+
+            <li class="section__1_main_elem flex">
+              <div class="section__1_main_elem_name flex">
+                <img src="images/section_1/basket.png" class="section__1_main_elem_name_img">
+
+                <p class="section__1_main_elem_name_name">
+                  thgnbff
+                </p>
+              </div>
+
+              <p class="section__1_main_elem_objects">
+                18
+              </p>
+
+              <p class="section__1_main_elem_size">
+                36.2MiB
+              </p>
+
+              <p class="section__1_main_elem_access">
+                R/W
+              </p>
+
+              <div class="section__1_main_elem_line"></div>
+            </li>
+
+            <li class="section__1_main_elem flex">
+              <div class="section__1_main_elem_name flex">
+                <img src="images/section_1/basket.png" class="section__1_main_elem_name_img">
+
+                <p class="section__1_main_elem_name_name">
+                  gtr5gtb5
+                </p>
+              </div>
+
+              <p class="section__1_main_elem_objects">
+                18
+              </p>
+
+              <p class="section__1_main_elem_size">
+                36.2MiB
+              </p>
+
+              <p class="section__1_main_elem_access">
+                R/W
+              </p>
+
+              <div class="section__1_main_elem_line"></div>
+            </li>
+
+            <li class="section__1_main_elem flex">
+              <div class="section__1_main_elem_name flex">
+                <img src="images/section_1/basket.png" class="section__1_main_elem_name_img">
+
+                <p class="section__1_main_elem_name_name">
+                  development.reports
+                </p>
+              </div>
+
+              <p class="section__1_main_elem_objects">
+                18
+              </p>
+
+              <p class="section__1_main_elem_size">
+                36.2MiB
+              </p>
+
+              <p class="section__1_main_elem_access">
+                R/W
+              </p>
+
+              <div class="section__1_main_elem_line"></div>
+            </li>
+
+            <li class="section__1_main_elem flex">
+              <div class="section__1_main_elem_name flex">
+                <img src="images/section_1/basket.png" class="section__1_main_elem_name_img">
+
+                <p class="section__1_main_elem_name_name">
+                  fghgh
+                </p>
+              </div>
+
+              <p class="section__1_main_elem_objects">
+                18
+              </p>
+
+              <p class="section__1_main_elem_size">
+                36.2MiB
+              </p>
+
+              <p class="section__1_main_elem_access">
+                R/W
+              </p>
+
+              <div class="section__1_main_elem_line"></div>
+            </li>
+
+            <li class="section__1_main_elem flex">
+              <div class="section__1_main_elem_name flex">
+                <img src="images/section_1/basket.png" class="section__1_main_elem_name_img">
+
+                <p class="section__1_main_elem_name_name">
+                  klhgjhfd
+                </p>
+              </div>
+
+              <p class="section__1_main_elem_objects">
+                18
+              </p>
+
+              <p class="section__1_main_elem_size">
+                36.2MiB
+              </p>
+
+              <p class="section__1_main_elem_access">
+                R/W
+              </p>
+
+              <div class="section__1_main_elem_line"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section__bucket">
+      <h2 class="section__bucket_title">
+        <button class="btn section__bucket_title_btn flex">
+          <img src="images/section_bucket/arrow_back.png" class="section__bucket_title_img">
+
+          <p class="section__bucket_title_text">
+            Object Browser
+          </p>
+        </button>
+      </h2>
+      
+      <div class="section__line"></div>
+
+      <div class="section__bucket_down">
+        <div class="section__bucket_search flex">
+          <input type="text" class="section__bucket_search_input" placeholder="Filter Files">
+  
+          <img src="images/section_1/search.png" class="section__bucket_search_img">
+        </div>
+
+        <div class="section__bucket_main">
+          <div class="section__bucket_main_top flex">
+            <img src="images/section_bucket/basket-blue.png" class="section__bucket_main_top_img">
+
+            <div class="section__bucket_main_top_info flex">
+              <p class="section__bucket_main_top_info_name">
+                development.reports
+              </p>
+
+              <div class="section__bucket_main_top_info_info flex">
+                <p class="section__bucket_main_top_info_info_created">
+                  Created on: <b>Fri, Apr 14 2023 16:14:08 (GMT+7)</b>
+                </p>
+
+                <p class="section__bucket_main_top_info_info_access">
+                  Access: <b>PRIVATE</b>
+                </p>
+
+                <p class="section__bucket_main_top_info_info_size">
+                  36.2 MiB - 18 Objects
+                </p>
+              </div>
+            </div>
+
+            <div class="section__bucket_main_top_buttons flex">
+              <button class="section__bucket_main_top_refresh btn flex">
+                <p class="section__bucket_main_top_refresh_text">
+                  Refresh
+                </p>
+  
+                <img src="images/section_bucket/reload.png" class="section__bucket_main_top_refresh_img">
+              </button>
+  
+              <button class="section__bucket_main_top_upload btn flex">
+                <p class="section__bucket_main_top_upload_text">
+                  Upload
+                </p>
+  
+                <img src="images/section_bucket/upload.png" class="section__bucket_main_top_upload_img">
+              </button>
+            </div>
+          </div>
+
+          <div class="section_bucket_main_line"></div>
+
+          <div class="section__bucket_main_down flex">
+            <div class="section__bucket_main_down_buttons">
+              <button class="section__bucket_main_down_download btn">
+                Download
+              </button>
+  
+              <button class="section__bucket_main_down_delete btn">
+                Delete
+              </button>
+  
+              <button class="section__bucket_main_down_create btn">
+                Create new path
+              </button>
+            </div>
+            
+            <div class="section__bucket_main_down_main flex">
+              <div class="section__bucket_main_down_main_info flex">
+                <input type="checkbox" class="section__bucket_main_down_main_info_input">
+
+                <p class="section__bucket_main_down_main_info_name">
+                  Name
+                </p>
+
+                <p class="section__bucket_main_down_main_info_modified">
+                  Last Modified
+                </p>
+
+                <p class="section__bucket_main_down_main_info_size">
+                  Size
+                </p>
+              </div>
+
+              <div class="section__bucket_main_down_main_line"></div>
+
+              <ul class="section__bucket_main_down_main_list">
+                <li class="section__bucket_main_down_main_elem flex">
+                  <input type="checkbox" class="section__bucket_main_down_main_elem_input">
+
+                  <div class="section__bucket_main_down_main_elem_container flex">
+                    <img src="images/section_bucket/file.png" class="section__bucket_main_down_main_elem_img">
+
+                    <p class="section__bucket_main_down_main_elem_name">
+                      045v36vv3462-3634325-4c554v5v
+                    </p>
+                  </div>
+                  
+                  <p class="section__bucket_main_down_main_elem_date">
+                    Fri, May 19 2023 21:35 (GMT+7)
+                  </p>
+
+                  <p class="section__bucket_main_down_main_elem_size">
+                    2.1 MiB
+                  </p>
+
+                  <div class="section__bucket_main_down_main_elem_line"></div>
+                </li>
+
+                <li class="section__bucket_main_down_main_elem flex">
+                  <input type="checkbox" class="section__bucket_main_down_main_elem_input">
+
+                  <div class="section__bucket_main_down_main_elem_container flex">
+                    <img src="images/section_bucket/file.png" class="section__bucket_main_down_main_elem_img">
+
+                    <p class="section__bucket_main_down_main_elem_name">
+                      dfghjk-3634325-4c554v5v
+                    </p>
+                  </div>
+                  
+                  <p class="section__bucket_main_down_main_elem_date">
+                    Fri, May 19 2023 21:35 (GMT+7)
+                  </p>
+
+                  <p class="section__bucket_main_down_main_elem_size">
+                    2.1 MiB
+                  </p>
+
+                  <div class="section__bucket_main_down_main_elem_line"></div>
+                </li>
+
+                <li class="section__bucket_main_down_main_elem flex">
+                  <input type="checkbox" class="section__bucket_main_down_main_elem_input">
+
+                  <div class="section__bucket_main_down_main_elem_container flex">
+                    <img src="images/section_bucket/file.png" class="section__bucket_main_down_main_elem_img">
+
+                    <p class="section__bucket_main_down_main_elem_name">
+                      045v36vv3462-fdghjkl-4c554v5v
+                    </p>
+                  </div>
+                  
+                  <p class="section__bucket_main_down_main_elem_date">
+                    Fri, May 19 2023 21:35 (GMT+7)
+                  </p>
+
+                  <p class="section__bucket_main_down_main_elem_size">
+                    2.1 MiB
+                  </p>
+
+                  <div class="section__bucket_main_down_main_elem_line"></div>
+                </li>
+
+                <li class="section__bucket_main_down_main_elem flex">
+                  <input type="checkbox" class="section__bucket_main_down_main_elem_input">
+
+                  <div class="section__bucket_main_down_main_elem_container flex">
+                    <img src="images/section_bucket/file.png" class="section__bucket_main_down_main_elem_img">
+
+                    <p class="section__bucket_main_down_main_elem_name">
+                      045v36vv3462-3634325-54b654rth
+                    </p>
+                  </div>
+                  
+                  <p class="section__bucket_main_down_main_elem_date">
+                    Fri, May 19 2023 21:35 (GMT+7)
+                  </p>
+
+                  <p class="section__bucket_main_down_main_elem_size">
+                    2.1 MiB
+                  </p>
+
+                  <div class="section__bucket_main_down_main_elem_line"></div>
+                </li>
+
+                <li class="section__bucket_main_down_main_elem flex">
+                  <input type="checkbox" class="section__bucket_main_down_main_elem_input">
+
+                  <div class="section__bucket_main_down_main_elem_container flex">
+                    <img src="images/section_bucket/file.png" class="section__bucket_main_down_main_elem_img">
+
+                    <p class="section__bucket_main_down_main_elem_name">
+                      045v36vv3462-3634325-4c554v5v
+                    </p>
+                  </div>
+                  
+                  <p class="section__bucket_main_down_main_elem_date">
+                    Fri, May 19 2023 21:35 (GMT+7)
+                  </p>
+
+                  <p class="section__bucket_main_down_main_elem_size">
+                    2.1 MiB
+                  </p>
+
+                  <div class="section__bucket_main_down_main_elem_line"></div>
+                </li>
+
+                <li class="section__bucket_main_down_main_elem flex">
+                  <input type="checkbox" class="section__bucket_main_down_main_elem_input">
+
+                  <div class="section__bucket_main_down_main_elem_container flex">
+                    <img src="images/section_bucket/file.png" class="section__bucket_main_down_main_elem_img">
+
+                    <p class="section__bucket_main_down_main_elem_name">
+                      045v36vv3462-3634325-4c554v5v
+                    </p>
+                  </div>
+                  
+                  <p class="section__bucket_main_down_main_elem_date">
+                    Fri, May 19 2023 21:35 (GMT+7)
+                  </p>
+
+                  <p class="section__bucket_main_down_main_elem_size">
+                    2.1 MiB
+                  </p>
+
+                  <div class="section__bucket_main_down_main_elem_line"></div>
+                </li>
+
+                <li class="section__bucket_main_down_main_elem flex">
+                  <input type="checkbox" class="section__bucket_main_down_main_elem_input">
+
+                  <div class="section__bucket_main_down_main_elem_container flex">
+                    <img src="images/section_bucket/file.png" class="section__bucket_main_down_main_elem_img">
+
+                    <p class="section__bucket_main_down_main_elem_name">
+                      045v36vv3462-3634325-4c554v5v
+                    </p>
+                  </div>
+                  
+                  <p class="section__bucket_main_down_main_elem_date">
+                    Fri, May 19 2023 21:35 (GMT+7)
+                  </p>
+
+                  <p class="section__bucket_main_down_main_elem_size">
+                    2.1 MiB
+                  </p>
+
+                  <div class="section__bucket_main_down_main_elem_line"></div>
+                </li>
+
+                <li class="section__bucket_main_down_main_elem flex">
+                  <input type="checkbox" class="section__bucket_main_down_main_elem_input">
+
+                  <div class="section__bucket_main_down_main_elem_container flex">
+                    <img src="images/section_bucket/file.png" class="section__bucket_main_down_main_elem_img">
+
+                    <p class="section__bucket_main_down_main_elem_name">
+                      045v36vv3462-3634325-4c554v5v
+                    </p>
+                  </div>
+                  
+                  <p class="section__bucket_main_down_main_elem_date">
+                    Fri, May 19 2023 21:35 (GMT+7)
+                  </p>
+
+                  <p class="section__bucket_main_down_main_elem_size">
+                    2.1 MiB
+                  </p>
+
+                  <div class="section__bucket_main_down_main_elem_line"></div>
+                </li>
+
+                <li class="section__bucket_main_down_main_elem flex">
+                  <input type="checkbox" class="section__bucket_main_down_main_elem_input">
+
+                  <div class="section__bucket_main_down_main_elem_container flex">
+                    <img src="images/section_bucket/file.png" class="section__bucket_main_down_main_elem_img">
+
+                    <p class="section__bucket_main_down_main_elem_name">
+                      045v36vv3462-3634325-4c554v5v
+                    </p>
+                  </div>
+                  
+                  <p class="section__bucket_main_down_main_elem_date">
+                    Fri, May 19 2023 21:35 (GMT+7)
+                  </p>
+
+                  <p class="section__bucket_main_down_main_elem_size">
+                    2.1 MiB
+                  </p>
+
+                  <div class="section__bucket_main_down_main_elem_line"></div>
+                </li>
+
+                <li class="section__bucket_main_down_main_elem flex">
+                  <input type="checkbox" class="section__bucket_main_down_main_elem_input">
+
+                  <div class="section__bucket_main_down_main_elem_container flex">
+                    <img src="images/section_bucket/file.png" class="section__bucket_main_down_main_elem_img">
+
+                    <p class="section__bucket_main_down_main_elem_name">
+                      045v36vv3462-3634325-4c554v5v
+                    </p>
+                  </div>
+                  
+                  <p class="section__bucket_main_down_main_elem_date">
+                    Fri, May 19 2023 21:35 (GMT+7)
+                  </p>
+
+                  <p class="section__bucket_main_down_main_elem_size">
+                    2.1 MiB
+                  </p>
+
+                  <div class="section__bucket_main_down_main_elem_line"></div>
+                </li>
+
+                <li class="section__bucket_main_down_main_elem flex">
+                  <input type="checkbox" class="section__bucket_main_down_main_elem_input">
+
+                  <div class="section__bucket_main_down_main_elem_container flex">
+                    <img src="images/section_bucket/file.png" class="section__bucket_main_down_main_elem_img">
+
+                    <p class="section__bucket_main_down_main_elem_name">
+                      045v36vv3462-3634325-4c554v5v
+                    </p>
+                  </div>
+                  
+                  <p class="section__bucket_main_down_main_elem_date">
+                    Fri, May 19 2023 21:35 (GMT+7)
+                  </p>
+
+                  <p class="section__bucket_main_down_main_elem_size">
+                    2.1 MiB
+                  </p>
+
+                  <div class="section__bucket_main_down_main_elem_line"></div>
+                </li>
+
+                <li class="section__bucket_main_down_main_elem flex">
+                  <input type="checkbox" class="section__bucket_main_down_main_elem_input">
+
+                  <div class="section__bucket_main_down_main_elem_container flex">
+                    <img src="images/section_bucket/file.png" class="section__bucket_main_down_main_elem_img">
+
+                    <p class="section__bucket_main_down_main_elem_name">
+                      045v36vv3462-3634325-4c554v5v
+                    </p>
+                  </div>
+                  
+                  <p class="section__bucket_main_down_main_elem_date">
+                    Fri, May 19 2023 21:35 (GMT+7)
+                  </p>
+
+                  <p class="section__bucket_main_down_main_elem_size">
+                    2.1 MiB
+                  </p>
+
+                  <div class="section__bucket_main_down_main_elem_line"></div>
+                </li>
+
+                <li class="section__bucket_main_down_main_elem flex">
+                  <input type="checkbox" class="section__bucket_main_down_main_elem_input">
+
+                  <div class="section__bucket_main_down_main_elem_container flex">
+                    <img src="images/section_bucket/file.png" class="section__bucket_main_down_main_elem_img">
+
+                    <p class="section__bucket_main_down_main_elem_name">
+                      045v36vv3462-3634325-4c554v5v
+                    </p>
+                  </div>
+                  
+                  <p class="section__bucket_main_down_main_elem_date">
+                    Fri, May 19 2023 21:35 (GMT+7)
+                  </p>
+
+                  <p class="section__bucket_main_down_main_elem_size">
+                    2.1 MiB
+                  </p>
+
+                  <div class="section__bucket_main_down_main_elem_line"></div>
+                </li>
+
+                <li class="section__bucket_main_down_main_elem flex">
+                  <input type="checkbox" class="section__bucket_main_down_main_elem_input">
+
+                  <div class="section__bucket_main_down_main_elem_container flex">
+                    <img src="images/section_bucket/file.png" class="section__bucket_main_down_main_elem_img">
+
+                    <p class="section__bucket_main_down_main_elem_name">
+                      045v36vv3462-3634325-4c554v5v
+                    </p>
+                  </div>
+                  
+                  <p class="section__bucket_main_down_main_elem_date">
+                    Fri, May 19 2023 21:35 (GMT+7)
+                  </p>
+
+                  <p class="section__bucket_main_down_main_elem_size">
+                    2.1 MiB
+                  </p>
+
+                  <div class="section__bucket_main_down_main_elem_line"></div>
+                </li>
+
+                <li class="section__bucket_main_down_main_elem flex">
+                  <input type="checkbox" class="section__bucket_main_down_main_elem_input">
+
+                  <div class="section__bucket_main_down_main_elem_container flex">
+                    <img src="images/section_bucket/file.png" class="section__bucket_main_down_main_elem_img">
+
+                    <p class="section__bucket_main_down_main_elem_name">
+                      045v36vv3462-3634325-4c554v5v
+                    </p>
+                  </div>
+                  
+                  <p class="section__bucket_main_down_main_elem_date">
+                    Fri, May 19 2023 21:35 (GMT+7)
+                  </p>
+
+                  <p class="section__bucket_main_down_main_elem_size">
+                    2.1 MiB
+                  </p>
+
+                  <div class="section__bucket_main_down_main_elem_line"></div>
+                </li>
+
+                <li class="section__bucket_main_down_main_elem flex">
+                  <input type="checkbox" class="section__bucket_main_down_main_elem_input">
+
+                  <div class="section__bucket_main_down_main_elem_container flex">
+                    <img src="images/section_bucket/file.png" class="section__bucket_main_down_main_elem_img">
+
+                    <p class="section__bucket_main_down_main_elem_name">
+                      045v36vv3462-3634325-4c554v5v
+                    </p>
+                  </div>
+                  
+                  <p class="section__bucket_main_down_main_elem_date">
+                    Fri, May 19 2023 21:35 (GMT+7)
+                  </p>
+
+                  <p class="section__bucket_main_down_main_elem_size">
+                    2.1 MiB
+                  </p>
+
+                  <div class="section__bucket_main_down_main_elem_line"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="section section__2">
+      <p class="section__2_title">
+        Access Keys
+      </p>
+    </section>
+
+    <section class="section section__3">
+      <p class="section__3_title">
+        Documentation
+      </p>
+    </section>
+
+    <section class="section section__4">
+      <h2 class="section__4_title">
+        Buckets
+      </h2>
+      
+      <div class="section__line"></div>
+      
+      <div class="section__4_down">
+        <div class="section__4_search flex">
+          <input type="text" class="section__4_search_input" placeholder="Search Buckets">
+  
+          <img src="images/section_4/search.png" class="section__4_search_img">
+        </div>
+        
+        <div class="section__4_buttons flex">
+          <button class="section__4_menu flex">
+            <img src="images/section_4/menu.png" class="section__4_menu_img">
+          </button>
+
+          <button class="section__4_delete flex">
+            <img src="images/section_4/delete.png" class="section__4_delete_img">
+          </button>
+
+          <button class="section__4_reload flex">
+            <img src="images/section_4/reload.png" class="section__4_reload_img">
+          </button>
+
+          <button class="section__4_create flex">
+            <p class="section__4_create_text">
+              Create Bucket
+            </p>
+
+            <img src="images/section_4/plus.png" class="section__4_create_img">
+          </button>
+        </div>
+  
+        <ul class="section__4_main_list flex">
+          <li class="section__4_main_elem flex">
+            <p class="section__4_main_elem_name">
+              <input type="checkbox" class="section__4_main_elem_name_input">
+              
+              development.reports
+            </p>
+
+            <div class="section__4_main_elem_info flex">
+              <p class="section__4_main_elem_created">
+                Created: Fri Apr 14 2023 16:14:08 GMT+0300 <br> (Москва, стандартное время)
+              </p>
+
+              <p class="section__4_main_elem_access">
+                Access: R/W
+              </p>
+            </div>
+
+            <div class="section__4_main_elem_line"></div>
+
+            <div class="section__4_main_elem_data flex">
+              <img src="images/section_4/basket-blue.png" class="section__4_main_elem_main-img">
+
+              <div class="section__4_main_elem_usage flex">
+                <div class="section__4_main_elem_usage_container flex">
+                  <img src="images/section_4/usage.png" class="section__4_main_elem_usage_img">
+
+                  <p class="section__4_main_elem_usage_text">
+                    Usage
+                  </p>
+                </div>
+
+                <p class="section__4_main_elem_usage_data">
+                  36.2MiB
+                </p>
+              </div>
+
+              <div class="section__4_main_elem_objects flex">
+                <div class="section__4_main_elem_objects_container flex">
+                  <img src="images/section_4/objects.png" class="section__4_main_elem_objects_img">
+
+                  <p class="section__4_main_elem_objects_text">
+                    Objects
+                  </p>
+                </div>
+
+                <p class="section__4_main_elem_objects_data">
+                  18
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section__create_basket">
+      <h2 class="section__create_basket_title">
+        <button class="btn section__create_basket_title_btn flex">
+          <img src="images/section_create_basket/arrow_back.png" class="section__create_basket_title_img">
+
+          <p class="section__create_basket_title_text">
+            Buckets
+          </p>
+        </button>
+      </h2>
+      
+      <div class="section__line"></div>
+
+      <div class="section__create_basket_main flex">
+        <div class="section__create_basket_main_left flex">
+          <div class="section__create_basket_main_left_title flex">
+            <img src="images/section_create_basket/basket-blue.png" class="section__create_basket_main_left_title_img">
+
+            <p class="section__create_basket_main_left_title_text">
+              Create Bucket
+            </p>
+          </div>
+          
+          <div class="section__create_basket_main_left_line"></div>
+
+          <div class="section__create_basket_main_left_name flex">
+            <p class="section__create_basket_main_left_name_text">
+              Bucket Name*
+            </p>
+
+            <input type="text" class="section__create_basket_main_left_name_input">
+          </div>
+
+          <p class="section__create_basket_main_left_features_text">
+            Features
+          </p>
+
+          <div class="section__create_basket_main_left_line"></div>
+
+          <div class="section__create_basket_main_left_features flex">
+            <div class="section__create_basket_main_left_features_left">
+              <p class="section__create_basket_main_left_features_left_versioning">
+                Versioning
+              </p>
+
+              <p class="section__create_basket_main_left_features_left_object-locking">
+                Object Locking
+              </p>
+
+              <p class="section__create_basket_main_left_features_left_quota">
+                Quota
+              </p>
+
+              <p class="section__create_basket_main_left_features_left_capacity">
+                Capacity*
+              </p>
+
+              <p class="section__create_basket_main_left_features_left_retention">
+                Retention
+              </p>
+
+              <p class="section__create_basket_main_left_features_left_mode">
+                Mode
+              </p>
+
+              <p class="section__create_basket_main_left_features_left_validity">
+                Validity*
+              </p>
+            </div>
+
+            <div class="section__create_basket_main_left_features_right">
+              <div class="section__create_basket_main_left_features_right_versioning flex">
+                <p class="section__create_basket_main_left_features_right_versioning_off">
+                  OFF
+                </p>
+
+                <label class="section__create_basket_main_left_features_right_versioning_input">
+                  <input type="checkbox">
+                </label>
+
+                <p class="section__create_basket_main_left_features_right_versioning_on">
+                  ON
+                </p>
+              </div>
+
+              <div class="section__create_basket_main_left_features_right_object-locking flex">
+                <p class="section__create_basket_main_left_features_right_object-locking_off">
+                  OFF
+                </p>
+                
+                <label class="section__create_basket_main_left_features_right_object-locking_input">
+                  <input type="checkbox">
+                </label>
+
+                <p class="section__create_basket_main_left_features_right_object-locking_on">
+                  ON
+                </p>
+              </div>
+
+              <div class="section__create_basket_main_left_features_right_quota flex">
+                <p class="section__create_basket_main_left_features_right_quota_off">
+                  OFF
+                </p>
+
+                <label class="section__create_basket_main_left_features_right_quota_input">
+                  <input type="checkbox">
+                </label>
+
+                <p class="section__create_basket_main_left_features_right_quota_on">
+                  ON
+                </p>
+              </div>
+              
+              <input type="text" class="section__create_basket_main_left_features_right_capacity" value="1">
+              
+              <div class="section__create_basket_main_left_features_right_retention flex">
+                <p class="section__create_basket_main_left_features_right_retention_off">
+                  OFF
+                </p>
+
+                <label class="section__create_basket_main_left_features_right_retention_input">
+                  <input type="checkbox">
+                </label>
+
+                <p class="section__create_basket_main_left_features_right_retention_on">
+                  ON
+                </p>
+              </div>
+              
+              <div class="section__create_basket_main_left_features_right_mode">
+                <input id="compliance" type="radio" name="group_1" class="section__create_basket_main_left_features_right_mode_input-1" checked>
+                <label for="compliance" class="section__create_basket_main_left_features_right_mode_label-1">Compliance</label>
+
+                <input id="governance" type="radio" name="group_1" class="section__create_basket_main_left_features_right_mode_input-2">
+                <label for="governance" class="section__create_basket_main_left_features_right_mode_label-2">Governance</label>
+              </div>
+              
+              <input type="text" class="section__create_basket_main_left_features_right_validity" value="180">
+            </div>
+          </div>
+
+          <div class="section__create_basket_main_left_buttons flex">
+            <button class="section__create_basket_main_left_buttons_clear">
+              Clear
+            </button>
+  
+            <button class="section__create_basket_main_left_buttons_create">
+              Create Bucket
+            </button>
+          </div>
+        </div>
+
+        <div class="section__create_basket_main_right flex">
+          <div class="section__create_basket_main_right_title flex">
+            <img src="images/section_create_basket/basket-blue.png" class="section__create_basket_main_right_title_img">
+
+            <p class="section__create_basket_main_right_title_text">
+              Buckets
+            </p>
+          </div>
+
+          <p class="section__create_basket_main_right_text-1">
+            Objects Store uses buckets to organize objects. A bucket is similar to a folder or directory in a filesystem, where each bucket can hold an arbitrary number of objects.
+          </p>
+
+          <p class="section__create_basket_main_right_text-2">
+            <b>Versioning</b> allows to keep multiple versions of the same object under the same key.
+          </p>
+
+          <p class="section__create_basket_main_right_text-3">
+            <b>Object Locking</b> prevents objects from being deleted. Required to support retention and legal hold. Can only be enabled at bucket creation.
+          </p>
+
+          <p class="section__create_basket_main_right_text-4">
+            <b>Quota</b> limits the amount of data in the bucket.
+          </p>
+
+          <p class="section__create_basket_main_right_text-5">
+            <b>Retention</b> imposes rules to prevent object deletion for a period of time. Versioning must be enabled in order to set bucket retention policies.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section__about">
+      <h2 class="section__about_title">
+        <button class="btn section__about_title_btn flex">
+          <img src="images/section_about/arrow_back.png" class="section__about_title_img">
+
+          <p class="section__about_title_text">
+            Buckets
+          </p>
+        </button>
+      </h2>
+
+      <div class="section__line"></div>
+
+      <div class="section__about_main flex">
+        <div class="section__about_main_top flex">
+          <img src="images/section_about/basket-blue.png" class="section__about_main_top_img">
+
+          <div class="section__about_main_top_info flex">
+            <p class="section__about_main_top_info_name">
+              development.reports
+            </p>
+
+            <p class="section__about_main_top_info_access">
+              Access: <b>Private</b>
+            </p>
+          </div>
+
+          <div class="section__about_main_top_buttons flex">
+            <button class="section__about_main_top_delete btn flex">
+              <p class="section__about_main_top_delete_text">
+                Delete Bucket
+              </p>
+
+              <img src="images/section_about/delete.png" class="section__about_main_top_delete_img">
+            </button>
+
+            <button class="section__about_main_top_refresh btn flex">
+              <p class="section__about_main_top_refresh_text">
+                Refresh
+              </p>
+
+              <img src="images/section_about/reload.png" class="section__about_main_top_refresh_img">
+            </button>
+          </div>
+        </div>
+
+        <div class="section__about_main_down">
+          <p class="section__about_main_down_title">
+            Summary
+          </p>
+
+          <div class="section__about_main_down_line"></div>
+
+          <div class="section__about_main_down_access flex">
+            <p class="section__about_main_down_access_text-1">
+              Access Policy:
+            </p>
+
+            <p class="section__about_main_down_access_text-2">
+              Private
+            </p>
+          </div>
+
+          <div class="section__about_main_down_encryption flex">
+            <p class="section__about_main_down_encryption_text-1">
+              Encryption:
+            </p>
+
+            <p class="section__about_main_down_encryption_text-2">
+              Disabled
+            </p>
+          </div>
+
+          <div class="section__about_main_down_locking flex">
+            <p class="section__about_main_down_locking_text-1">
+              Object Locking:
+            </p>
+
+            <p class="section__about_main_down_locking_text-2">
+              Disabled
+            </p>
+          </div>
+
+          <div class="section__about_main_down_quota flex">
+            <p class="section__about_main_down_quota_text-1">
+              Quota:
+            </p>
+
+            <p class="section__about_main_down_quota_text-2">
+              Disabled
+            </p>
+          </div>
+
+          <div class="section__about_main_down_usage flex">
+            <img src="images/section_about/usage.png" class="section__about_main_down_usage_img">
+
+            <div class="section__about_main_down_usage_container flex">
+              <p class="section__about_main_down_usage_text-1">
+                Reported Usage:
+              </p>
+
+              <p class="section__about_main_down_usage_text-2">
+                36.2 MiB
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section__5">
+      <p class="section__5_title">
+        Monitoring
+      </p>
+    </section>
+
+    <section class="section section__6">
+      <p class="section__6_title">
+        License
+      </p>
+    </section>
+  </main>
+
+  <script src="scripts/api.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
